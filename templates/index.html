@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS Service Dashboard</title>
+</head>
+<body>
+
+<h1>AWS Service Dashboard</h1>
+
+<form method="POST">
+
+    <label>Service Name</label><br>
+    <input type="text" name="service_name"><br><br>
+
+    <label>Service Type</label><br>
+    <select name="service_type">
+        <option>EC2</option>
+        <option>S3</option>
+        <option>RDS</option>
+        <option>Lambda</option>
+        <option>VPC</option>
+    </select><br><br>
+
+    <label>Region</label><br>
+    <input type="text" name="region"><br><br>
+
+    <label>Status</label><br>
+    <select name="status">
+        <option>Running</option>
+        <option>Stopped</option>
+        <option>Available</option>
+    </select><br><br>
+
+    <button type="submit">Add Service</button>
+
+</form>
+
+<hr>
+
+<h2>AWS Services</h2>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Service Name</th>
+    <th>Service Type</th>
+    <th>Region</th>
+    <th>Status</th>
+</tr>
+
+{% for service in services %}
+
+<tr>
+
+<td>{{ service[0] }}</td>
+<td>{{ service[1] }}</td>
+<td>{{ service[2] }}</td>
+<td>{{ service[3] }}</td>
+<td>{{ service[4] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
