@@ -144,8 +144,3 @@ Columns:
 
 ---
 
-## 👩‍💻 Author
-
-**Anushka Gupta**
-
-Aspiring Cloud & DevOps Engineer
